@@ -4,7 +4,7 @@
     Name                 : Efron
     Author               : Quixkit
     Author Portfolio     : https://themeforest.net/user/quixkit/portfolio
-    
+
 
 
     Table of Sass Contents
@@ -16,7 +16,7 @@
         _mixin
         _variable
 
-    2. bootstrap 
+    2. bootstrap
         -Here goes all official bootstrap scss files
 
     3. Global/Base
@@ -13684,7 +13684,7 @@ input[type="checkbox"]:checked:after {
 
 .form-control.is-invalid {
   border-color: #FF1616 !important;
-  border-right: 0px !important; }
+ }
   .form-control.is-invalid:focus {
     box-shadow: none; }
 
@@ -19404,3 +19404,15 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
       color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.logo{
+    text-align: center;
+}
+.logo img{
+    max-width: 80px;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
