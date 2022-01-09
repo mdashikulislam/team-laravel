@@ -1,5 +1,5 @@
 /*
-    Common 
+    Common
 */
 
 .wizard,
@@ -139,10 +139,8 @@
 
 .wizard > .content
 {
-    background: #eee;
-    display: block;
-    margin: 0.5em;
-    min-height: 35em;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     position: relative;
     width: auto;
@@ -160,15 +158,9 @@
     width: 65%;
 }
 
-.wizard > .content > .body
-{
-    float: left;
-    position: absolute;
-    width: 95%;
-    height: 95%;
-    padding: 2.5%;
+.wizard .content{
+    min-height: auto!important;
 }
-
 .wizard > .content > .body ul
 {
     list-style: disc !important;
@@ -214,7 +206,6 @@
 {
     color: #8a1f11;
     display: inline-block;
-    margin-left: 1.5em;
 }
 
 .wizard > .actions
@@ -379,4 +370,25 @@
 .tabcontrol > .content > .body ul > li
 {
     display: list-item;
+}
+.step-form-horizontal .wizard .steps li:not(:last-child)::after{
+    top: -1rem;
+}
+.content .form-group{
+    margin-bottom: 0;
+}
+.wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active{
+    padding: 0.55em 2em;
+}
+.wizard > .content > .body select.error {
+    background: rgb(251, 227, 228);
+    border: 1px solid #fbc2c4;
+    color: #8a1f11;
+}
+.form-group .text-label{
+    color:#3d4465 ;
+}
+.wizard ul, .tabcontrol ul{
+    display: flex;
+    justify-content: center;
 }

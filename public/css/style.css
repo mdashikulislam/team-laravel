@@ -19415,4 +19415,6 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
     text-align: center;
     margin-top: 20px;
 }
-
+label.text-label{
+    font-weight: bold;
+}

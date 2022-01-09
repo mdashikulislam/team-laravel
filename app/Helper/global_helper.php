@@ -14,4 +14,16 @@ function getColorDropdown($selected = ''){
     }
     return $html;
 }
-
+function getGenderDropdown($selected = ''){
+    $data = ['Male','Female','Common'];
+    $html = '<option value="">Select Gender</option>';
+    foreach ($data as $d){
+        $html .="<option value='";
+        $html .=$d."'";
+        if ($selected == $d){
+           $html .=" selected ";
+       }
+        $html .=">".$d."</option>";
+    }
+    return $html;
+}

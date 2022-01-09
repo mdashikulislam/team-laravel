@@ -6,7 +6,7 @@
         headerTag: "h4",
         bodyTag: "section",
         transitionEffect: "slideLeft",
-        autoFocus: true, 
+        autoFocus: true,
         transitionEffect: "slideLeft",
         onStepChanging: function (event, currentIndex, newIndex)
         {

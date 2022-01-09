@@ -9,6 +9,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    @stack('css')
 </head>
 <body class="h-100">
 <div class="authincation h-100">
@@ -36,5 +37,6 @@
 <script src="{{asset('vendor/global/global.min.js')}}"></script>
 <script src="{{asset('js/quixnav-init.js')}}"></script>
 <script src="{{asset('js/custom.min.js')}}"></script>
+@stack('js')
 </body>
 </html>
