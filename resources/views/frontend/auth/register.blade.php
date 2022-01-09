@@ -6,9 +6,10 @@
     <div class="col-xl-12">
         <div class="auth-form">
             <h4 class="text-center mb-4">Register your account</h4>
-            <form action="#" id="step-form-horizontal" class="step-form-horizontal">
+            <form action="{{route('register')}}" id="step-form-horizontal" method="post" class="step-form-horizontal">
+                @csrf
                 <div>
-                    <h4>Personal Info</h4>
+                    <h4>Club Info</h4>
                     <section>
                         <div class="row">
                             <div class="col-lg-12 mb-4">
@@ -25,13 +26,13 @@
                             </div>
                         </div>
                     </section>
-                    <h4>Company Info</h4>
+                    <h4>Team Info</h4>
                     <section>
                         <div class="row">
                             <div class="col-lg-12 mb-4">
                                 <div class="form-group">
                                     <label class="text-label">Team Name :</label>
-                                    <input type="text" name="team_name" class="form-control" placeholder="Team Name" required>
+                                    <input type="text" name="team_name" class="form-control"  required>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-4">
@@ -56,19 +57,72 @@
                             <div class="col-lg-12 mb-4">
                                 <div class="form-group">
                                     <label class="text-label">Home Kit Color :</label>
-                                    <input type="text" name="home_kit" class="form-control" placeholder="Home Kit Color" required>
+                                    <input type="text" name="home_kit" class="form-control"  required>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-4">
                                 <div class="form-group">
                                     <label class="text-label">Away Kit Color :</label>
-                                    <input  type="text" name="away_kit" class="form-control" placeholder="Away Kit Color" required>
+                                    <input  type="text" name="away_kit" class="form-control"  required>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-4">
                                 <div class="form-group">
                                     <label class="text-label">Training Kit Color :</label>
-                                    <input type="text" name="training_kit" class="form-control" placeholder="Training Kit Color" required>
+                                    <input type="text" name="training_kit" class="form-control"  required>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <h4>Your Info</h4>
+                    <section>
+                        <div class="row">
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Your Name :</label>
+                                    <input type="text" name="your_name" class="form-control"  required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Your Address :</label>
+                                    <textarea  name="address" class="form-control"  required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Town :</label>
+                                    <input type="text" name="town" class="form-control"  required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Post Code :</label>
+                                    <input type="text" name="post_code" class="form-control"  required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Home Mobile :</label>
+                                    <input type="text" name="home_mobile" class="form-control"  required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Present Contact :</label>
+                                    <input type="text" name="present_contact" class="form-control"  required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Email :</label>
+                                    <input type="email" name="email" class="form-control"  required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <div class="form-group">
+                                    <label class="text-label">Passeword :</label>
+                                    <input type="password" name="password" class="form-control"  required>
                                 </div>
                             </div>
                         </div>
@@ -95,11 +149,13 @@
             {
                 form.validate().settings.ignore = ":disabled,:hidden";
                 return form.valid();
+                // return true;
             },
             onFinishing: function (event, currentIndex)
             {
                 form.validate().settings.ignore = ":disabled";
                 return form.valid();
+                // return true;
             },
             onFinished:function (event,currentIndex){
                 $('#step-form-horizontal').submit();

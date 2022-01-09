@@ -19418,3 +19418,8 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 label.text-label{
     font-weight: bold;
 }
+.error{
+    color: #FF1616!important;
+    margin-top: 5px;
+}
+
