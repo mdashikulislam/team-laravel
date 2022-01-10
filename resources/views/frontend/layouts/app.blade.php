@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Focus - Bootstrap Admin Dashboard </title>
+    @yield('title')
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}">
     <link rel="stylesheet" href="{{asset('vendor/owl-carousel/css/owl.carousel.min.css')}}">
@@ -42,7 +41,7 @@
     <div class="nav-header">
         <a href="{{route('landing')}}" class="brand-logo">
             <img class="logo-abbr" src="{{asset('images/teams.png')}}" alt="">
-            <h3 class="m-0 ml-2 text-white">{{getenv('APP_NAME')}}</h3>
+            <h3 class="m-0 ml-2 text-white brand-title">{{getenv('APP_NAME')}}</h3>
         </a>
 
         <div class="nav-control">
@@ -83,7 +82,7 @@
     @include('frontend.layouts.menu')
     <div class="content-body">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row justify-content-center">
                 @section('content')
                 @show
             </div>

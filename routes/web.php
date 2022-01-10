@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes(['verify' => false]);
-Route::middleware(['auth'])->group(function (){
+Auth::routes(['verify' => true]);
+Route::middleware(['auth','verified'])->group(function (){
     Route::get('/',[\App\Http\Controllers\DashboardController::class,'index'])->name('landing');
 });
 
