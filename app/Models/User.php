@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable,HasRoles;
 
@@ -22,6 +22,21 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'address',
+        'team_name',
+        'away_kit',
+        'club_name',
+        'current_age_gap',
+        'home_kit',
+        'home_mobile',
+        'group_gender',
+        'post_code',
+        'is_active',
+        'locality',
+        'your_name',
+        'town',
+        'training_kit',
+        'present_contact'
     ];
 
     /**

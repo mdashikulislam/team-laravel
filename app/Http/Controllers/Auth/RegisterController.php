@@ -50,9 +50,22 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'club_name' => ['required', 'string', 'max:255'],
+            'locality' => ['required', 'string', 'max:255'],
+            'team_name' => ['required', 'string', 'max:255'],
+            'current_age_gap' => ['required'],
+            'group_gender' => ['required'],
+            'home_kit' => ['required','max:255'],
+            'away_kit' => ['required','max:255'],
+            'training_kit' => ['required','max:255'],
+            'address' => ['required','max:255'],
+            'town' => ['required','max:255'],
+            'post_code' => ['required','max:255'],
+            'home_mobile' => ['required','max:255'],
+            'present_contact' => ['required','max:255'],
+            'your_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8'],
         ]);
     }
 
@@ -65,7 +78,20 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'club_name' => $data['club_name'],
+            'name' => $data['your_name'],
+            'locality' => $data['locality'],
+            'team_name' => $data['team_name'],
+            'current_age_gap' => $data['current_age_gap'],
+            'group_gender' => $data['group_gender'],
+            'home_kit' => $data['home_kit'],
+            'away_kit' => $data['away_kit'],
+            'training_kit' => $data['training_kit'],
+            'your_name' => $data['your_name'],
+            'town' => $data['town'],
+            'post_code' => $data['post_code'],
+            'home_mobile' => $data['home_mobile'],
+            'present_contact' => $data['present_contact'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

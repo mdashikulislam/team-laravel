@@ -12,13 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes(['verify' => false]);
+Route::middleware(['auth'])->group(function (){
+    Route::get('/',[\App\Http\Controllers\DashboardController::class,'index'])->name('landing');
+});
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('landing');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('dashboard',[\App\Http\Controllers\DashboardController::class,'index'])->name('dashboard');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
