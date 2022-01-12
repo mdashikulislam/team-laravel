@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('vendor/owl-carousel/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/owl-carousel/css/owl.theme.default.min.css')}}">
     <link href="{{asset('vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 
@@ -111,7 +112,7 @@
 
 <!-- Owl Carousel -->
 <script src="{{asset('vendor/owl-carousel/js/owl.carousel.min.js')}}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Counter Up -->
 <script src="{{asset('vendor/jqvmap/js/jquery.vmap.min.js')}}"></script>
 <script src="{{asset('vendor/jqvmap/js/jquery.vmap.usa.js')}}"></script>
